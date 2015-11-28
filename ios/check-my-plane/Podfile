@@ -9,6 +9,7 @@ target 'check-my-plane' do
 pod 'AFNetworking', '~> 2.4'
 pod 'Mixpanel'
 pod 'YapDatabase'
+pod 'Mantle'
 
 end
 

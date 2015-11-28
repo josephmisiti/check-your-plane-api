@@ -18,6 +18,7 @@
 		6473BD961C0A1C880089FCD3 /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6473BD951C0A1C880089FCD3 /* HTTPClient.m */; };
 		6473BD991C0A1CA50089FCD3 /* QueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6473BD981C0A1CA50089FCD3 /* QueryViewController.m */; };
 		6473BD9C1C0A1D780089FCD3 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 6473BD9B1C0A1D780089FCD3 /* Constants.m */; };
+		6473BDA11C0A4E450089FCD3 /* Accident.m in Sources */ = {isa = PBXBuildFile; fileRef = 6473BDA01C0A4E450089FCD3 /* Accident.m */; };
 		D8C3A3D782D4294E5AA6E0D5 /* libPods-check-my-plane.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 551E19FA41C5C2184EBC0906 /* libPods-check-my-plane.a */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,9 @@
 		6473BD981C0A1CA50089FCD3 /* QueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryViewController.m; sourceTree = "<group>"; };
 		6473BD9A1C0A1D780089FCD3 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		6473BD9B1C0A1D780089FCD3 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		6473BD9D1C0A42F80089FCD3 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		6473BD9F1C0A4E450089FCD3 /* Accident.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Accident.h; sourceTree = "<group>"; };
+		6473BDA01C0A4E450089FCD3 /* Accident.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Accident.m; sourceTree = "<group>"; };
 		BB04E86AB746F1A4F81CDD46 /* Pods-check-my-plane.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-check-my-plane.debug.xcconfig"; path = "Pods/Target Support Files/Pods-check-my-plane/Pods-check-my-plane.debug.xcconfig"; sourceTree = "<group>"; };
 		C4AE9DEBEE69B6A17EC638EE /* Pods-check-my-plane.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-check-my-plane.release.xcconfig"; path = "Pods/Target Support Files/Pods-check-my-plane/Pods-check-my-plane.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,13 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				6473BD931C0A1C1D0089FCD3 /* Application */,
+				6473BD9E1C0A436B0089FCD3 /* Classes */,
 				6473BD5D1C0A1AB80089FCD3 /* Supporting Files */,
-				6473BD9A1C0A1D780089FCD3 /* Constants.h */,
-				6473BD9B1C0A1D780089FCD3 /* Constants.m */,
-				6473BD941C0A1C880089FCD3 /* HTTPClient.h */,
-				6473BD951C0A1C880089FCD3 /* HTTPClient.m */,
-				6473BD971C0A1CA50089FCD3 /* QueryViewController.h */,
-				6473BD981C0A1CA50089FCD3 /* QueryViewController.m */,
 			);
 			path = "check-my-plane";
 			sourceTree = "<group>";
@@ -178,11 +177,27 @@
 				6473BD611C0A1AB80089FCD3 /* AppDelegate.m */,
 				6473BD661C0A1AB80089FCD3 /* Main.storyboard */,
 				6473BD6C1C0A1AB80089FCD3 /* Assets.xcassets */,
+				6473BD9A1C0A1D780089FCD3 /* Constants.h */,
+				6473BD9B1C0A1D780089FCD3 /* Constants.m */,
 				6473BD6E1C0A1AB80089FCD3 /* LaunchScreen.storyboard */,
 				6473BD711C0A1AB80089FCD3 /* Info.plist */,
 				6473BD691C0A1AB80089FCD3 /* check_my_plane.xcdatamodeld */,
+				6473BD9D1C0A42F80089FCD3 /* PrefixHeader.pch */,
 			);
 			name = Application;
+			sourceTree = "<group>";
+		};
+		6473BD9E1C0A436B0089FCD3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6473BD941C0A1C880089FCD3 /* HTTPClient.h */,
+				6473BD951C0A1C880089FCD3 /* HTTPClient.m */,
+				6473BD971C0A1CA50089FCD3 /* QueryViewController.h */,
+				6473BD981C0A1CA50089FCD3 /* QueryViewController.m */,
+				6473BD9F1C0A4E450089FCD3 /* Accident.h */,
+				6473BDA01C0A4E450089FCD3 /* Accident.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,6 +371,7 @@
 				6473BD961C0A1C880089FCD3 /* HTTPClient.m in Sources */,
 				6473BD5F1C0A1AB80089FCD3 /* main.m in Sources */,
 				6473BD9C1C0A1D780089FCD3 /* Constants.m in Sources */,
+				6473BDA11C0A4E450089FCD3 /* Accident.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +452,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "check-my-plane/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -477,6 +494,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "check-my-plane/PrefixHeader.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

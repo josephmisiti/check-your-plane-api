@@ -10,6 +10,7 @@
 
 // Global Strings
 extern NSString *const kQueryURL;
+extern NSString *const kDetailsURL;
 
 // Global Colors
 extern NSUInteger const kColorGrey;

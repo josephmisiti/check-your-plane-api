@@ -33,17 +33,17 @@
                          failure:(MAPHTTPClientFailure)failure {
     
     
-//    [self GET:kCitiBikeStationURL parameters:params
-//      success:^(AFHTTPRequestOperation *operation, id responseObject){
-//          if(success){
-//              success((AFHTTPRequestOperation *)operation, responseObject);
-//          }
-//          
-//      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//          if (failure) {
-//              failure((AFHTTPRequestOperation *)operation, error);
-//          }
-//      }];
+    [self GET:kQueryURL parameters:params
+      success:^(AFHTTPRequestOperation *operation, id responseObject){
+          if(success){
+              success((AFHTTPRequestOperation *)operation, responseObject);
+          }
+          
+      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+          if (failure) {
+              failure((AFHTTPRequestOperation *)operation, error);
+          }
+      }];
 
 }
 

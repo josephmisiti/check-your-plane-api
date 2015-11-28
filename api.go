@@ -25,6 +25,11 @@ type Accident struct {
 
 type Accidents []Accident
 
+type AccidentResponse struct {
+	Success bool
+	Objects Accidents
+}
+
 func (l *Accidents) addElement(registrationNumber string, eventId string) {
 	e := &Accident{
 		RegistrationNumber: registrationNumber,
@@ -71,7 +76,13 @@ func AccidentEventEndpoint(w http.ResponseWriter, r *http.Request) {
 		}
 		accidents.addElement(regis_no, ev_id)
 	}
-	json.NewEncoder(w).Encode(accidents)
+
+	response := AccidentResponse{
+		Success: true,
+		Objects: accidents,
+	}
+
+	json.NewEncoder(w).Encode(response)
 
 }
 
@@ -111,7 +122,12 @@ func AccidentQueryEndPoint(w http.ResponseWriter, r *http.Request) {
 		accidents.addElement(regis_no, ev_id)
 	}
 
-	json.NewEncoder(w).Encode(accidents)
+	response := AccidentResponse{
+		Success: true,
+		Objects: accidents,
+	}
+
+	json.NewEncoder(w).Encode(response)
 }
 
 func main() {

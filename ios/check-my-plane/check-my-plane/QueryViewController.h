@@ -10,4 +10,10 @@
 
 @interface QueryViewController : UIViewController
 
+@property (nonatomic, strong) UILabel* inputLabel;
+@property (nonatomic, strong) UITextField* inputField;
+@property (nonatomic, strong) UIButton* submitButton;
+
+-(void)onSubmitQuery:(id)sender;
+
 @end

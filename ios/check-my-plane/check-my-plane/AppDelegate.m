@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "QueryViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    QueryViewController* queryView = [[QueryViewController alloc] init];
+    UINavigationController *navigationController =
+    [[UINavigationController alloc] initWithRootViewController:queryView];
+    navigationController.navigationBar.translucent = NO;
+    [self.window setRootViewController:navigationController];
+    return YES;
     return YES;
 }
 

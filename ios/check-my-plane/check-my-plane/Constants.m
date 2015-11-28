@@ -8,7 +8,8 @@
 
 #import "Constants.h"
 
-NSString *const kQueryURL = @"https://www.citibikenyc.com/stations/json";
+NSString *const kQueryURL = @"http://dev.checkmyplane.com/api/v1/accidents";
+NSString *const kDetailsURL = @"http://dev.checkmyplane.com/api/v1/accidents/%@";
 
 CGFloat const kCellHeight = 100.0f;
 
