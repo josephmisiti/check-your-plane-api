@@ -7,8 +7,14 @@
 //
 
 #import "QueryViewController.h"
+#import "HTTPClient.h"
+#import "AccidentViewController.h"
+#import "Accident.h"
 
-@implementation QueryViewController
+@implementation QueryViewController {
+    HTTPClient *_httpClient;
+    AccidentViewController* _accidentViewController;
+}
 
 @synthesize inputLabel = _inputLabel;
 @synthesize inputField = _inputField;
@@ -26,6 +32,8 @@ static CGFloat kLeftMargin = 15.0f;
     [self.view addSubview:self.inputField];
     [self.view addSubview:self.submitButton];
     
+    _httpClient = [HTTPClient sharedClient];
+    _accidentViewController = [[AccidentViewController alloc] init];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -51,6 +59,8 @@ static CGFloat kLeftMargin = 15.0f;
         _inputField.frame = CGRectMake(kLeftMargin, yOffset, self.view.frame.size.width-2.0f*kLeftMargin, 50.0f);
         _inputField.backgroundColor = [UIColor whiteColor];
         _inputField.placeholder = @"Enter registration number (starts with N)";
+        _inputField.layer.cornerRadius = 10; // this value vary as per your desire
+        _inputField.clipsToBounds = YES;
     }
     return _inputField;
 }
@@ -62,6 +72,8 @@ static CGFloat kLeftMargin = 15.0f;
         _submitButton.frame = CGRectMake(kLeftMargin, yOffset, self.view.frame.size.width-2.0f*kLeftMargin, 50.0f);
         _submitButton.backgroundColor = UIColorFromRGB(kColorPink);
         _submitButton.alpha = 0.5f;
+        _submitButton.layer.cornerRadius = 10; // this value vary as per your desire
+        _submitButton.clipsToBounds = YES;
         [_submitButton setTitle:@"Check My Plane" forState:UIControlStateNormal];
         _submitButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:25.0f];
         [_submitButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -77,6 +89,25 @@ static CGFloat kLeftMargin = 15.0f;
 
 -(void)onSubmitQuery:(id)sender {
     NSLog(@"--- onSubmitQuery");
+    NSDictionary* params =  @{ @"registration_number" : @"N6312H" };
+    [_httpClient searchRegistrationNumber:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDictionary *dictionary = (NSDictionary *)responseObject;
+        NSLog(@"%@", dictionary);
+        for (NSDictionary *accidentDictionary in [dictionary objectForKey:@"Objects"]) {
+            NSError *error = nil;
+            Accident *accident = [MTLJSONAdapter modelOfClass:Accident.class fromJSONDictionary:accidentDictionary error:&error];
+            NSLog(@"%@",accident);
+        }
+        
+        [self.navigationController pushViewController:_accidentViewController animated:YES];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+
+    }];
+    
+    
+    
+    
 }
 
 @end

@@ -12,8 +12,8 @@ import (
 )
 
 const (
-	REGISTRATION_QUERY = "SELECT id,regis_no,ev_id FROM events WHERE regis_no = '%s'"
-	ACCIDENTS_QUERY    = "SELECT id,regis_no FROM events where regis_no ~* '%s'"
+	REGISTRATION_QUERY = "SELECT id,regis_no,ev_id FROM events WHERE regis_no = '%s' LIMIT 5"
+	ACCIDENTS_QUERY    = "SELECT id,regis_no FROM events where regis_no ~* '%s' LIMIT 5"
 	DESCRIPTION_URL    = "http://www.ntsb.gov/_layouts/ntsb.aviation/brief.aspx?ev_id=%s"
 )
 
@@ -90,7 +90,7 @@ func AccidentQueryEndPoint(w http.ResponseWriter, r *http.Request) {
 
 	reg_num := r.FormValue("regis_no")
 
-	QUERY := "SELECT id,regis_no,ev_id FROM events"
+	QUERY := "SELECT id,regis_no,ev_id FROM events LIMIT 5"
 	if reg_num != "" {
 		QUERY = fmt.Sprintf(ACCIDENTS_QUERY, reg_num)
 	}

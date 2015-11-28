@@ -11,5 +11,7 @@
 @interface Accident : MTLModel <MTLJSONSerializing>
 
 @property (nonatomic, copy, readonly) NSString *eventId;
+@property (nonatomic, copy, readonly) NSString *registrationNumber;
+@property (nonatomic, copy, readonly) NSString *accidentInfo;
 
 @end

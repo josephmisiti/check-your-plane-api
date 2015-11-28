@@ -19,6 +19,8 @@
 		6473BD991C0A1CA50089FCD3 /* QueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6473BD981C0A1CA50089FCD3 /* QueryViewController.m */; };
 		6473BD9C1C0A1D780089FCD3 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 6473BD9B1C0A1D780089FCD3 /* Constants.m */; };
 		6473BDA11C0A4E450089FCD3 /* Accident.m in Sources */ = {isa = PBXBuildFile; fileRef = 6473BDA01C0A4E450089FCD3 /* Accident.m */; };
+		6473BDA31C0A57EB0089FCD3 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6473BDA21C0A57EB0089FCD3 /* background.png */; };
+		6473BDA61C0A5A1E0089FCD3 /* AccidentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6473BDA51C0A5A1E0089FCD3 /* AccidentViewController.m */; };
 		D8C3A3D782D4294E5AA6E0D5 /* libPods-check-my-plane.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 551E19FA41C5C2184EBC0906 /* libPods-check-my-plane.a */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +67,9 @@
 		6473BD9D1C0A42F80089FCD3 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		6473BD9F1C0A4E450089FCD3 /* Accident.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Accident.h; sourceTree = "<group>"; };
 		6473BDA01C0A4E450089FCD3 /* Accident.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Accident.m; sourceTree = "<group>"; };
+		6473BDA21C0A57EB0089FCD3 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		6473BDA41C0A5A1E0089FCD3 /* AccidentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccidentViewController.h; sourceTree = "<group>"; };
+		6473BDA51C0A5A1E0089FCD3 /* AccidentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccidentViewController.m; sourceTree = "<group>"; };
 		BB04E86AB746F1A4F81CDD46 /* Pods-check-my-plane.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-check-my-plane.debug.xcconfig"; path = "Pods/Target Support Files/Pods-check-my-plane/Pods-check-my-plane.debug.xcconfig"; sourceTree = "<group>"; };
 		C4AE9DEBEE69B6A17EC638EE /* Pods-check-my-plane.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-check-my-plane.release.xcconfig"; path = "Pods/Target Support Files/Pods-check-my-plane/Pods-check-my-plane.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +152,7 @@
 		6473BD5D1C0A1AB80089FCD3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6473BDA21C0A57EB0089FCD3 /* background.png */,
 				6473BD5E1C0A1AB80089FCD3 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -190,14 +196,40 @@
 		6473BD9E1C0A436B0089FCD3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				6473BD941C0A1C880089FCD3 /* HTTPClient.h */,
-				6473BD951C0A1C880089FCD3 /* HTTPClient.m */,
+				6473BDA91C0A5A600089FCD3 /* Networking */,
+				6473BDA71C0A5A500089FCD3 /* Controllers */,
+				6473BDA81C0A5A590089FCD3 /* Models */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		6473BDA71C0A5A500089FCD3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				6473BD971C0A1CA50089FCD3 /* QueryViewController.h */,
 				6473BD981C0A1CA50089FCD3 /* QueryViewController.m */,
+				6473BDA41C0A5A1E0089FCD3 /* AccidentViewController.h */,
+				6473BDA51C0A5A1E0089FCD3 /* AccidentViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		6473BDA81C0A5A590089FCD3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
 				6473BD9F1C0A4E450089FCD3 /* Accident.h */,
 				6473BDA01C0A4E450089FCD3 /* Accident.m */,
 			);
-			name = Classes;
+			name = Models;
+			sourceTree = "<group>";
+		};
+		6473BDA91C0A5A600089FCD3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				6473BD941C0A1C880089FCD3 /* HTTPClient.h */,
+				6473BD951C0A1C880089FCD3 /* HTTPClient.m */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6473BD701C0A1AB80089FCD3 /* LaunchScreen.storyboard in Resources */,
+				6473BDA31C0A57EB0089FCD3 /* background.png in Resources */,
 				6473BD6D1C0A1AB80089FCD3 /* Assets.xcassets in Resources */,
 				6473BD681C0A1AB80089FCD3 /* Main.storyboard in Resources */,
 			);
@@ -370,6 +403,7 @@
 				6473BD621C0A1AB80089FCD3 /* AppDelegate.m in Sources */,
 				6473BD961C0A1C880089FCD3 /* HTTPClient.m in Sources */,
 				6473BD5F1C0A1AB80089FCD3 /* main.m in Sources */,
+				6473BDA61C0A5A1E0089FCD3 /* AccidentViewController.m in Sources */,
 				6473BD9C1C0A1D780089FCD3 /* Constants.m in Sources */,
 				6473BDA11C0A4E450089FCD3 /* Accident.m in Sources */,
 			);

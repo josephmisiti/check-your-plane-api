@@ -10,7 +10,6 @@
 
 @implementation HTTPClient
 
-
 + (HTTPClient *)sharedClient {
     static HTTPClient *sharedClient = nil;
     static dispatch_once_t onceToken;
@@ -33,7 +32,12 @@
                          failure:(MAPHTTPClientFailure)failure {
     
     
-    [self GET:kQueryURL parameters:params
+    NSString* url = kQueryURL;
+    if([params objectForKey:@"registration_number"]){
+        url = [NSString stringWithFormat:kDetailsURL, [params objectForKey:@"registration_number"]];
+    }
+    NSLog(@"%@", url);
+    [self GET:url parameters:params
       success:^(AFHTTPRequestOperation *operation, id responseObject){
           if(success){
               success((AFHTTPRequestOperation *)operation, responseObject);
@@ -46,6 +50,5 @@
       }];
 
 }
-
 
 @end

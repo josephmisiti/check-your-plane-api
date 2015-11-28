@@ -14,6 +14,8 @@
 {
     return @{
         @"eventId" : @"EventId",
+        @"registrationNumber" : @"RegistrationNumber",
+        @"accidentInfo" : @"Description",
     };
 }
 
@@ -23,5 +25,14 @@
     
     return self;
 }
+
+
+- (NSString *)description {
+    return [NSString stringWithFormat:
+            @"Accident: %@ %@ %@",
+            self.eventId, self.registrationNumber, self.accidentInfo];
+}
+
+
 
 @end
