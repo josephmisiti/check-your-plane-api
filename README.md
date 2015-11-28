@@ -32,7 +32,7 @@ make web
 
 Currently the API provides two endpoints (neither require authentication):
 
-To get a list of all accidents, you can hit
+To get a list of all accidents, you can hit (update your [host file](https://github.com/josephmisiti/check-your-plane-api/blob/master/hosts))
 
 ```
 http://dev.checkmyplane.com/api/v1/accidents
