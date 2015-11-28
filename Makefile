@@ -14,3 +14,6 @@ clean:
 	
 build:
 	go build -o bin/api api.go	
+
+web:
+	bin/api
