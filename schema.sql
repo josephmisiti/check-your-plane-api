@@ -9,7 +9,11 @@ CREATE TABLE events
     ev_type text,
     ev_id text,
     regis_no text,
-    ntsb_no text
+    ntsb_no text,
+    owner_acft text,
+    ev_highest_injury text,
+    ev_city text,
+    commercial_space_flight integer
 );
 
 

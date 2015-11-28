@@ -1,0 +1,620 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6473BD5F1C0A1AB80089FCD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6473BD5E1C0A1AB80089FCD3 /* main.m */; };
+		6473BD621C0A1AB80089FCD3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6473BD611C0A1AB80089FCD3 /* AppDelegate.m */; };
+		6473BD681C0A1AB80089FCD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6473BD661C0A1AB80089FCD3 /* Main.storyboard */; };
+		6473BD6B1C0A1AB80089FCD3 /* check_my_plane.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6473BD691C0A1AB80089FCD3 /* check_my_plane.xcdatamodeld */; };
+		6473BD6D1C0A1AB80089FCD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6473BD6C1C0A1AB80089FCD3 /* Assets.xcassets */; };
+		6473BD701C0A1AB80089FCD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6473BD6E1C0A1AB80089FCD3 /* LaunchScreen.storyboard */; };
+		6473BD7B1C0A1AB80089FCD3 /* check_my_planeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6473BD7A1C0A1AB80089FCD3 /* check_my_planeTests.m */; };
+		6473BD861C0A1AB80089FCD3 /* check_my_planeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6473BD851C0A1AB80089FCD3 /* check_my_planeUITests.m */; };
+		6473BD961C0A1C880089FCD3 /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6473BD951C0A1C880089FCD3 /* HTTPClient.m */; };
+		6473BD991C0A1CA50089FCD3 /* QueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6473BD981C0A1CA50089FCD3 /* QueryViewController.m */; };
+		6473BD9C1C0A1D780089FCD3 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 6473BD9B1C0A1D780089FCD3 /* Constants.m */; };
+		D8C3A3D782D4294E5AA6E0D5 /* libPods-check-my-plane.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 551E19FA41C5C2184EBC0906 /* libPods-check-my-plane.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6473BD771C0A1AB80089FCD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6473BD521C0A1AB80089FCD3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6473BD591C0A1AB80089FCD3;
+			remoteInfo = "check-my-plane";
+		};
+		6473BD821C0A1AB80089FCD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6473BD521C0A1AB80089FCD3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6473BD591C0A1AB80089FCD3;
+			remoteInfo = "check-my-plane";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		551E19FA41C5C2184EBC0906 /* libPods-check-my-plane.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-check-my-plane.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6473BD5A1C0A1AB80089FCD3 /* check-my-plane.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "check-my-plane.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6473BD5E1C0A1AB80089FCD3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6473BD601C0A1AB80089FCD3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6473BD611C0A1AB80089FCD3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6473BD671C0A1AB80089FCD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6473BD6A1C0A1AB80089FCD3 /* check_my_plane.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = check_my_plane.xcdatamodel; sourceTree = "<group>"; };
+		6473BD6C1C0A1AB80089FCD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6473BD6F1C0A1AB80089FCD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6473BD711C0A1AB80089FCD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6473BD761C0A1AB80089FCD3 /* check-my-planeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "check-my-planeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6473BD7A1C0A1AB80089FCD3 /* check_my_planeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = check_my_planeTests.m; sourceTree = "<group>"; };
+		6473BD7C1C0A1AB80089FCD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6473BD811C0A1AB80089FCD3 /* check-my-planeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "check-my-planeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6473BD851C0A1AB80089FCD3 /* check_my_planeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = check_my_planeUITests.m; sourceTree = "<group>"; };
+		6473BD871C0A1AB80089FCD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6473BD941C0A1C880089FCD3 /* HTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPClient.h; sourceTree = "<group>"; };
+		6473BD951C0A1C880089FCD3 /* HTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPClient.m; sourceTree = "<group>"; };
+		6473BD971C0A1CA50089FCD3 /* QueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryViewController.h; sourceTree = "<group>"; };
+		6473BD981C0A1CA50089FCD3 /* QueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryViewController.m; sourceTree = "<group>"; };
+		6473BD9A1C0A1D780089FCD3 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		6473BD9B1C0A1D780089FCD3 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		BB04E86AB746F1A4F81CDD46 /* Pods-check-my-plane.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-check-my-plane.debug.xcconfig"; path = "Pods/Target Support Files/Pods-check-my-plane/Pods-check-my-plane.debug.xcconfig"; sourceTree = "<group>"; };
+		C4AE9DEBEE69B6A17EC638EE /* Pods-check-my-plane.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-check-my-plane.release.xcconfig"; path = "Pods/Target Support Files/Pods-check-my-plane/Pods-check-my-plane.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6473BD571C0A1AB80089FCD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8C3A3D782D4294E5AA6E0D5 /* libPods-check-my-plane.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6473BD731C0A1AB80089FCD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6473BD7E1C0A1AB80089FCD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02059B0160097D8623E5921C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB04E86AB746F1A4F81CDD46 /* Pods-check-my-plane.debug.xcconfig */,
+				C4AE9DEBEE69B6A17EC638EE /* Pods-check-my-plane.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1D1658047297B5142A9D9BE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				551E19FA41C5C2184EBC0906 /* libPods-check-my-plane.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6473BD511C0A1AB80089FCD3 = {
+			isa = PBXGroup;
+			children = (
+				6473BD5C1C0A1AB80089FCD3 /* check-my-plane */,
+				6473BD791C0A1AB80089FCD3 /* check-my-planeTests */,
+				6473BD841C0A1AB80089FCD3 /* check-my-planeUITests */,
+				6473BD5B1C0A1AB80089FCD3 /* Products */,
+				02059B0160097D8623E5921C /* Pods */,
+				1D1658047297B5142A9D9BE7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6473BD5B1C0A1AB80089FCD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6473BD5A1C0A1AB80089FCD3 /* check-my-plane.app */,
+				6473BD761C0A1AB80089FCD3 /* check-my-planeTests.xctest */,
+				6473BD811C0A1AB80089FCD3 /* check-my-planeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6473BD5C1C0A1AB80089FCD3 /* check-my-plane */ = {
+			isa = PBXGroup;
+			children = (
+				6473BD931C0A1C1D0089FCD3 /* Application */,
+				6473BD5D1C0A1AB80089FCD3 /* Supporting Files */,
+				6473BD9A1C0A1D780089FCD3 /* Constants.h */,
+				6473BD9B1C0A1D780089FCD3 /* Constants.m */,
+				6473BD941C0A1C880089FCD3 /* HTTPClient.h */,
+				6473BD951C0A1C880089FCD3 /* HTTPClient.m */,
+				6473BD971C0A1CA50089FCD3 /* QueryViewController.h */,
+				6473BD981C0A1CA50089FCD3 /* QueryViewController.m */,
+			);
+			path = "check-my-plane";
+			sourceTree = "<group>";
+		};
+		6473BD5D1C0A1AB80089FCD3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6473BD5E1C0A1AB80089FCD3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6473BD791C0A1AB80089FCD3 /* check-my-planeTests */ = {
+			isa = PBXGroup;
+			children = (
+				6473BD7A1C0A1AB80089FCD3 /* check_my_planeTests.m */,
+				6473BD7C1C0A1AB80089FCD3 /* Info.plist */,
+			);
+			path = "check-my-planeTests";
+			sourceTree = "<group>";
+		};
+		6473BD841C0A1AB80089FCD3 /* check-my-planeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6473BD851C0A1AB80089FCD3 /* check_my_planeUITests.m */,
+				6473BD871C0A1AB80089FCD3 /* Info.plist */,
+			);
+			path = "check-my-planeUITests";
+			sourceTree = "<group>";
+		};
+		6473BD931C0A1C1D0089FCD3 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				6473BD601C0A1AB80089FCD3 /* AppDelegate.h */,
+				6473BD611C0A1AB80089FCD3 /* AppDelegate.m */,
+				6473BD661C0A1AB80089FCD3 /* Main.storyboard */,
+				6473BD6C1C0A1AB80089FCD3 /* Assets.xcassets */,
+				6473BD6E1C0A1AB80089FCD3 /* LaunchScreen.storyboard */,
+				6473BD711C0A1AB80089FCD3 /* Info.plist */,
+				6473BD691C0A1AB80089FCD3 /* check_my_plane.xcdatamodeld */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6473BD591C0A1AB80089FCD3 /* check-my-plane */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6473BD8A1C0A1AB80089FCD3 /* Build configuration list for PBXNativeTarget "check-my-plane" */;
+			buildPhases = (
+				098D2D204B21199CE0ECB8C7 /* Check Pods Manifest.lock */,
+				6473BD561C0A1AB80089FCD3 /* Sources */,
+				6473BD571C0A1AB80089FCD3 /* Frameworks */,
+				6473BD581C0A1AB80089FCD3 /* Resources */,
+				45903FF05DA4694251C0FB4B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "check-my-plane";
+			productName = "check-my-plane";
+			productReference = 6473BD5A1C0A1AB80089FCD3 /* check-my-plane.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6473BD751C0A1AB80089FCD3 /* check-my-planeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6473BD8D1C0A1AB80089FCD3 /* Build configuration list for PBXNativeTarget "check-my-planeTests" */;
+			buildPhases = (
+				6473BD721C0A1AB80089FCD3 /* Sources */,
+				6473BD731C0A1AB80089FCD3 /* Frameworks */,
+				6473BD741C0A1AB80089FCD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6473BD781C0A1AB80089FCD3 /* PBXTargetDependency */,
+			);
+			name = "check-my-planeTests";
+			productName = "check-my-planeTests";
+			productReference = 6473BD761C0A1AB80089FCD3 /* check-my-planeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6473BD801C0A1AB80089FCD3 /* check-my-planeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6473BD901C0A1AB80089FCD3 /* Build configuration list for PBXNativeTarget "check-my-planeUITests" */;
+			buildPhases = (
+				6473BD7D1C0A1AB80089FCD3 /* Sources */,
+				6473BD7E1C0A1AB80089FCD3 /* Frameworks */,
+				6473BD7F1C0A1AB80089FCD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6473BD831C0A1AB80089FCD3 /* PBXTargetDependency */,
+			);
+			name = "check-my-planeUITests";
+			productName = "check-my-planeUITests";
+			productReference = 6473BD811C0A1AB80089FCD3 /* check-my-planeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6473BD521C0A1AB80089FCD3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Math And Pencil LLC";
+				TargetAttributes = {
+					6473BD591C0A1AB80089FCD3 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					6473BD751C0A1AB80089FCD3 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 6473BD591C0A1AB80089FCD3;
+					};
+					6473BD801C0A1AB80089FCD3 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 6473BD591C0A1AB80089FCD3;
+					};
+				};
+			};
+			buildConfigurationList = 6473BD551C0A1AB80089FCD3 /* Build configuration list for PBXProject "check-my-plane" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6473BD511C0A1AB80089FCD3;
+			productRefGroup = 6473BD5B1C0A1AB80089FCD3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6473BD591C0A1AB80089FCD3 /* check-my-plane */,
+				6473BD751C0A1AB80089FCD3 /* check-my-planeTests */,
+				6473BD801C0A1AB80089FCD3 /* check-my-planeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6473BD581C0A1AB80089FCD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6473BD701C0A1AB80089FCD3 /* LaunchScreen.storyboard in Resources */,
+				6473BD6D1C0A1AB80089FCD3 /* Assets.xcassets in Resources */,
+				6473BD681C0A1AB80089FCD3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6473BD741C0A1AB80089FCD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6473BD7F1C0A1AB80089FCD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		098D2D204B21199CE0ECB8C7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		45903FF05DA4694251C0FB4B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-check-my-plane/Pods-check-my-plane-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6473BD561C0A1AB80089FCD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6473BD991C0A1CA50089FCD3 /* QueryViewController.m in Sources */,
+				6473BD6B1C0A1AB80089FCD3 /* check_my_plane.xcdatamodeld in Sources */,
+				6473BD621C0A1AB80089FCD3 /* AppDelegate.m in Sources */,
+				6473BD961C0A1C880089FCD3 /* HTTPClient.m in Sources */,
+				6473BD5F1C0A1AB80089FCD3 /* main.m in Sources */,
+				6473BD9C1C0A1D780089FCD3 /* Constants.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6473BD721C0A1AB80089FCD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6473BD7B1C0A1AB80089FCD3 /* check_my_planeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6473BD7D1C0A1AB80089FCD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6473BD861C0A1AB80089FCD3 /* check_my_planeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6473BD781C0A1AB80089FCD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6473BD591C0A1AB80089FCD3 /* check-my-plane */;
+			targetProxy = 6473BD771C0A1AB80089FCD3 /* PBXContainerItemProxy */;
+		};
+		6473BD831C0A1AB80089FCD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6473BD591C0A1AB80089FCD3 /* check-my-plane */;
+			targetProxy = 6473BD821C0A1AB80089FCD3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6473BD661C0A1AB80089FCD3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6473BD671C0A1AB80089FCD3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6473BD6E1C0A1AB80089FCD3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6473BD6F1C0A1AB80089FCD3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6473BD881C0A1AB80089FCD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6473BD891C0A1AB80089FCD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6473BD8B1C0A1AB80089FCD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB04E86AB746F1A4F81CDD46 /* Pods-check-my-plane.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "check-my-plane/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mathandpencil.check-my-plane";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6473BD8C1C0A1AB80089FCD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4AE9DEBEE69B6A17EC638EE /* Pods-check-my-plane.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "check-my-plane/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mathandpencil.check-my-plane";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6473BD8E1C0A1AB80089FCD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "check-my-planeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mathandpencil.check-my-planeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/check-my-plane.app/check-my-plane";
+			};
+			name = Debug;
+		};
+		6473BD8F1C0A1AB80089FCD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "check-my-planeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mathandpencil.check-my-planeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/check-my-plane.app/check-my-plane";
+			};
+			name = Release;
+		};
+		6473BD911C0A1AB80089FCD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "check-my-planeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mathandpencil.check-my-planeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "check-my-plane";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		6473BD921C0A1AB80089FCD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "check-my-planeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mathandpencil.check-my-planeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "check-my-plane";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6473BD551C0A1AB80089FCD3 /* Build configuration list for PBXProject "check-my-plane" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6473BD881C0A1AB80089FCD3 /* Debug */,
+				6473BD891C0A1AB80089FCD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6473BD8A1C0A1AB80089FCD3 /* Build configuration list for PBXNativeTarget "check-my-plane" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6473BD8B1C0A1AB80089FCD3 /* Debug */,
+				6473BD8C1C0A1AB80089FCD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6473BD8D1C0A1AB80089FCD3 /* Build configuration list for PBXNativeTarget "check-my-planeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6473BD8E1C0A1AB80089FCD3 /* Debug */,
+				6473BD8F1C0A1AB80089FCD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6473BD901C0A1AB80089FCD3 /* Build configuration list for PBXNativeTarget "check-my-planeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6473BD911C0A1AB80089FCD3 /* Debug */,
+				6473BD921C0A1AB80089FCD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6473BD691C0A1AB80089FCD3 /* check_my_plane.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6473BD6A1C0A1AB80089FCD3 /* check_my_plane.xcdatamodel */,
+			);
+			currentVersion = 6473BD6A1C0A1AB80089FCD3 /* check_my_plane.xcdatamodel */;
+			path = check_my_plane.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6473BD521C0A1AB80089FCD3 /* Project object */;
+}

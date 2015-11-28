@@ -1,0 +1,22 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '6.0'
+
+# ignore all warnings from all pods
+inhibit_all_warnings!
+
+target 'check-my-plane' do
+
+pod 'AFNetworking', '~> 2.4'
+pod 'Mixpanel'
+pod 'YapDatabase'
+
+end
+
+target 'check-my-planeTests' do
+
+end
+
+target 'check-my-planeUITests' do
+
+end
+

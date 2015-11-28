@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "24B8FAE5C34EEA832B7835B43327C3BD22866515",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "24B8FAE5C34EEA832B7835B43327C3BD22866515" : 0,
+    "E5EFA56ABFCDEEAD2F2A3B2B470FE47208531A32" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "BD604016-18C9-45F6-B610-77C59A24096A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "24B8FAE5C34EEA832B7835B43327C3BD22866515" : "check-your-plane-api\/",
+    "E5EFA56ABFCDEEAD2F2A3B2B470FE47208531A32" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "check-my-plane",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ios\/check-my-plane\/check-my-plane.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:josephmisiti\/check-your-plane-api.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "24B8FAE5C34EEA832B7835B43327C3BD22866515"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:josephmisiti\/go-citibike.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E5EFA56ABFCDEEAD2F2A3B2B470FE47208531A32"
+    }
+  ]
+}
