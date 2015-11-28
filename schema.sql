@@ -13,6 +13,9 @@ CREATE TABLE events
     owner_acft text,
     ev_highest_injury text,
     ev_city text,
+    afm_hrs  text,
+    afm_hrs_last_insp text,
+    date_last_insp text,
     commercial_space_flight integer
 );
 

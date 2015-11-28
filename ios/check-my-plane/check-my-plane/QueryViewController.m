@@ -61,6 +61,8 @@ static CGFloat kLeftMargin = 15.0f;
         _inputField.placeholder = @"Enter registration number (starts with N)";
         _inputField.layer.cornerRadius = 10; // this value vary as per your desire
         _inputField.clipsToBounds = YES;
+        
+        _inputField.text = @"N8373L";
     }
     return _inputField;
 }
@@ -89,7 +91,7 @@ static CGFloat kLeftMargin = 15.0f;
 
 -(void)onSubmitQuery:(id)sender {
     NSLog(@"--- onSubmitQuery");
-    NSDictionary* params =  @{ @"registration_number" : @"N6312H" };
+    NSDictionary* params =  @{ @"registration_number" : self.inputField.text };
     [_httpClient searchRegistrationNumber:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *dictionary = (NSDictionary *)responseObject;
         NSLog(@"%@", dictionary);

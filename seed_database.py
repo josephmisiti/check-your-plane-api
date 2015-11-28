@@ -31,6 +31,7 @@ def load():
     events = pd.merge(events, aircraft, on='ev_id', how='outer')
     index = 1
     for event in json.loads(events.head(10000).to_json(orient='records')):
+        if index == 1: pprint.pprint(event)
         try:
             sql_statement = """INSERT INTO
                                 events (id,
@@ -44,6 +45,9 @@ def load():
                                         owner_acft,
                                         ev_highest_injury,
                                         ev_city,
+                                        afm_hrs,
+                                        afm_hrs_last_insp,
+                                        date_last_insp,
                                         commercial_space_flight)
                                VALUES ({index},
                                        '{acft_make}',
@@ -56,6 +60,9 @@ def load():
                                        '{owner_acft}',
                                        '{ev_highest_injury}',
                                        '{ev_city}',
+                                       '{afm_hrs}',
+                                       '{afm_hrs_last_insp}',
+                                       '{date_last_insp}',
                                        {commercial_space_flight}
                                        )""".format(
                                    index=index,
@@ -70,6 +77,9 @@ def load():
                                    ev_highest_injury=event['ev_highest_injury'],
                                    ev_city=(event['ev_city'] or "").strip().replace("'",""),
                                    commercial_space_flight=event['commercial_space_flight'],
+                                   afm_hrs=event['afm_hrs'],
+                                   afm_hrs_last_insp=event['afm_hrs_last_insp'],
+                                   date_last_insp=event['date_last_insp'],
                                )
             cur.execute(sql_statement)
             conn.commit()
@@ -77,7 +87,6 @@ def load():
         except UnicodeEncodeError, e:
             print("failed to add row %s %s" % (index, str(e)) )
             pass
-        #pprint.pprint(event)
     
 
 if __name__ == "__main__":
