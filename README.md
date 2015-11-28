@@ -1,6 +1,6 @@
 #### What is this ?
 
-Check My Plane is an iOS application + backend that lets you provide the wing number of your airplane  returns the maintenance history of your plane. The data used in this database is not checked into this repo, but it was taken from the NTSB [website](http://app.ntsb.gov/). The data is only in MSAccess format, so you need a windows machine to convert it to CSV.
+Check My Plane is an iOS application + backend that lets you provide the wing number of your airplane  returns the maintenance history of your plane. The data used in this database is not checked into this repo, but it was taken from the NTSB [website](http://www.ntsb.gov/_layouts/ntsb.aviation/index.aspx). The [data](http://app.ntsb.gov/avdata) is only in MSAccess format, so you need a windows machine to convert it to CSV.
 
 
 ####  Setting it up
