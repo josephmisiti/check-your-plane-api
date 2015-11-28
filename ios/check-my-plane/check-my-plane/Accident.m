@@ -16,6 +16,10 @@
         @"eventId" : @"EventId",
         @"registrationNumber" : @"RegistrationNumber",
         @"accidentInfo" : @"Description",
+        @"aircraftMake" : @"AircraftMake",
+        @"lastInspectedDate" : @"LastInspectedDate",
+        @"amountHrsSinceLastInspection" : @"AmountHrsSinceLastInspection",
+        @"amountOfHours" : @"AmountOfHours",
     };
 }
 

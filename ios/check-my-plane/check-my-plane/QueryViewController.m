@@ -95,12 +95,14 @@ static CGFloat kLeftMargin = 15.0f;
     [_httpClient searchRegistrationNumber:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *dictionary = (NSDictionary *)responseObject;
         NSLog(@"%@", dictionary);
+        Accident *accident;
         for (NSDictionary *accidentDictionary in [dictionary objectForKey:@"Objects"]) {
             NSError *error = nil;
-            Accident *accident = [MTLJSONAdapter modelOfClass:Accident.class fromJSONDictionary:accidentDictionary error:&error];
+            accident = [MTLJSONAdapter modelOfClass:Accident.class fromJSONDictionary:accidentDictionary error:&error];
             NSLog(@"%@",accident);
         }
         
+        [_accidentViewController setAccident:accident];
         [self.navigationController pushViewController:_accidentViewController animated:YES];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

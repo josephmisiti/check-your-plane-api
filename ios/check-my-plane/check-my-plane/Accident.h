@@ -13,5 +13,9 @@
 @property (nonatomic, copy, readonly) NSString *eventId;
 @property (nonatomic, copy, readonly) NSString *registrationNumber;
 @property (nonatomic, copy, readonly) NSString *accidentInfo;
+@property (nonatomic, copy, readonly) NSString *aircraftMake;
+@property (nonatomic, copy, readonly) NSString *lastInspectedDate;
+@property (nonatomic, copy, readonly) NSString *amountHrsSinceLastInspection;
+@property (nonatomic, copy, readonly) NSString *amountOfHours;
 
 @end
