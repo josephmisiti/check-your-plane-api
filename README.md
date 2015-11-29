@@ -44,7 +44,16 @@ And to get the information on an individual accident, you can hit the following 
 http://dev.checkmyplane.com/api/v1/accidents/N6312H
 ```
 
-####
+#### Usage
+
+[![](https://github.com/josephmisiti/check-your-plane-api/blob/master/images/screen1.png)]()
+
+[![](https://github.com/josephmisiti/check-your-plane-api/blob/master/images/screen2.png)]()
+
+[![](https://github.com/josephmisiti/check-your-plane-api/blob/master/images/screen3.png)]()
+
+
+#### Helping out?
 
 If you want to contribute, please provide a pull request or reach out on twitter [@josephmisiti](https://www.twitter.com/josephmisiti)
 
