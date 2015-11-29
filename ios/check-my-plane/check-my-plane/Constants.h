@@ -17,3 +17,8 @@ extern NSUInteger const kColorGrey;
 extern NSUInteger const kColorPink;
 
 // UITableViewController
+
+
+
+extern NSString *const NetworkAvailableNotification;
+extern NSString *const NetworkUnavailableNotification;

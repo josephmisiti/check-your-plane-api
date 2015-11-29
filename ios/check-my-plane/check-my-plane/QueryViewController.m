@@ -56,13 +56,19 @@ static CGFloat kLeftMargin = 15.0f;
     if(!_inputField) {
         CGFloat yOffset = self.inputLabel.frame.origin.y + self.inputLabel.frame.size.height + 5.0f;
         _inputField = [[UITextField alloc] init];
-        _inputField.frame = CGRectMake(kLeftMargin, yOffset, self.view.frame.size.width-2.0f*kLeftMargin, 50.0f);
+        _inputField.frame = CGRectMake(kLeftMargin, yOffset, self.view.frame.size.width-2.0f*kLeftMargin, 100.0f);
         _inputField.backgroundColor = [UIColor whiteColor];
-        _inputField.placeholder = @"Enter registration number (starts with N)";
         _inputField.layer.cornerRadius = 10; // this value vary as per your desire
         _inputField.clipsToBounds = YES;
-        
+        [_inputField setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:75.0]];
         _inputField.text = @"N8373L";
+        UIColor *color = [UIColor blackColor];
+        _inputField.attributedPlaceholder =
+        [[NSAttributedString alloc] initWithString:@"Enter registration number (starts with N)"
+        attributes:@{
+                     NSForegroundColorAttributeName: color,
+                     NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Bold" size:15.0]
+        }];
     }
     return _inputField;
 }
@@ -71,7 +77,7 @@ static CGFloat kLeftMargin = 15.0f;
     if(!_submitButton) {
         CGFloat yOffset = self.inputField.frame.origin.y + self.inputField.frame.size.height + 5.0f;
         _submitButton = [[UIButton alloc] init];
-        _submitButton.frame = CGRectMake(kLeftMargin, yOffset, self.view.frame.size.width-2.0f*kLeftMargin, 50.0f);
+        _submitButton.frame = CGRectMake(kLeftMargin, yOffset, self.view.frame.size.width-2.0f*kLeftMargin, 150.0f);
         _submitButton.backgroundColor = UIColorFromRGB(kColorPink);
         _submitButton.alpha = 0.5f;
         _submitButton.layer.cornerRadius = 10; // this value vary as per your desire
@@ -90,11 +96,9 @@ static CGFloat kLeftMargin = 15.0f;
 #pragma mark - Clicks
 
 -(void)onSubmitQuery:(id)sender {
-    NSLog(@"--- onSubmitQuery");
     NSDictionary* params =  @{ @"registration_number" : self.inputField.text };
     [_httpClient searchRegistrationNumber:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *dictionary = (NSDictionary *)responseObject;
-        NSLog(@"%@", dictionary);
         Accident *accident;
         for (NSDictionary *accidentDictionary in [dictionary objectForKey:@"Objects"]) {
             NSError *error = nil;

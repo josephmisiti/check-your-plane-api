@@ -37,6 +37,4 @@
             self.eventId, self.registrationNumber, self.accidentInfo];
 }
 
-
-
 @end

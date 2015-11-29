@@ -15,3 +15,6 @@ CGFloat const kCellHeight = 100.0f;
 
 NSUInteger const kColorGrey = 0xf0f0f0;
 NSUInteger const kColorPink = 0xe51f1f;
+
+NSString *const NetworkAvailableNotification = @"NetworkAvailableNotification";
+NSString *const NetworkUnavailableNotification = @"NetworkUnavailableNotification";

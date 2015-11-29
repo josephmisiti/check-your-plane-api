@@ -24,6 +24,22 @@
         [newSet addObject:@"text/plain"];
         sharedClient.responseSerializer.acceptableContentTypes = newSet;
     });
+    
+    [sharedClient.reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        switch (status) {
+            case AFNetworkReachabilityStatusUnknown:
+                NSLog(@"AFNetworkReachabilityStatusUnknown");
+                break; // do nothing
+            case AFNetworkReachabilityStatusNotReachable:
+                NSLog(@"AFNetworkReachabilityStatusNotReachable");
+                [[NSNotificationCenter defaultCenter] postNotificationName:NetworkUnavailableNotification object:nil];
+                break;
+            default:
+                NSLog(@"default");
+                [[NSNotificationCenter defaultCenter] postNotificationName:NetworkAvailableNotification object:nil];
+                break;
+        }
+    }];
     return sharedClient;
 }
 

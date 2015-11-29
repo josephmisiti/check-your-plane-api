@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 import os
@@ -7,6 +6,7 @@ import json
 import pandas as pd
 import pprint
 import psycopg2
+import glob
 
 config = {
     'HOST': 'localhost',
@@ -26,67 +26,76 @@ def load():
         dbname=config['NAME'])
     cur = conn.cursor()
     
-    events = pd.read_csv("data/events.txt")
     aircraft = pd.read_csv("data/aircraft.txt")
+    events = pd.read_csv("data/events.txt")
     events = pd.merge(events, aircraft, on='ev_id', how='outer')
+    events = events.dropna(subset=['owner_acft'], how='all')
+    events.fillna("None", inplace=True)
     index = 1
-    for event in json.loads(events.head(10000).to_json(orient='records')):
-        if index == 1: pprint.pprint(event)
+    for e in events.iterrows():
+        event = e[1]            
+        sql_statement = """INSERT INTO
+                            events (id,
+                                    acft_make,
+                                    ev_month,
+                                    ev_year,
+                                    ev_type,
+                                    ev_id,
+                                    regis_no,
+                                    ntsb_no,
+                                    owner_acft,
+                                    ev_highest_injury,
+                                    ev_city,
+                                    afm_hrs,
+                                    afm_hrs_last_insp,
+                                    date_last_insp,
+                                    commercial_space_flight)
+                           VALUES ({index},
+                                   '{acft_make}',
+                                   {ev_month},
+                                   {ev_year},
+                                   '{ev_type}',
+                                   '{ev_id}',
+                                   '{regis_no}',
+                                   '{ntsb_no}',
+                                   '{owner_acft}',
+                                   '{ev_highest_injury}',
+                                   '{ev_city}',
+                                   '{afm_hrs}',
+                                   '{afm_hrs_last_insp}',
+                                   '{date_last_insp}',
+                                   {commercial_space_flight}
+                                   )""".format(
+                               index=index,
+                               acft_make=(str(event['acft_make']) or "").strip().replace("'",""),
+                               ev_month=event['ev_month'],
+                               ev_year=event['ev_year'],
+                               ev_type=event['ev_type'].strip().replace("'",""),
+                               ev_id=event['ev_id'],
+                               regis_no=event['regis_no'],
+                               ntsb_no=event['ntsb_no_x'],
+                               owner_acft=(event.get('owner_acft') or '').strip().replace("'",""),
+                               ev_highest_injury=event['ev_highest_injury'],
+                               ev_city=(str(event['ev_city']) or "").replace("'",""),
+                               commercial_space_flight=event['commercial_space_flight'],
+                               afm_hrs=event['afm_hrs'],
+                               afm_hrs_last_insp=event['afm_hrs_last_insp'],
+                               date_last_insp=event['commercial_space_flight'],
+                           )
+    
         try:
-            sql_statement = """INSERT INTO
-                                events (id,
-                                        acft_make,
-                                        ev_month,
-                                        ev_year,
-                                        ev_type,
-                                        ev_id,
-                                        regis_no,
-                                        ntsb_no,
-                                        owner_acft,
-                                        ev_highest_injury,
-                                        ev_city,
-                                        afm_hrs,
-                                        afm_hrs_last_insp,
-                                        date_last_insp,
-                                        commercial_space_flight)
-                               VALUES ({index},
-                                       '{acft_make}',
-                                       {ev_month},
-                                       {ev_year},
-                                       '{ev_type}',
-                                       '{ev_id}',
-                                       '{regis_no}',
-                                       '{ntsb_no}',
-                                       '{owner_acft}',
-                                       '{ev_highest_injury}',
-                                       '{ev_city}',
-                                       '{afm_hrs}',
-                                       '{afm_hrs_last_insp}',
-                                       '{date_last_insp}',
-                                       {commercial_space_flight}
-                                       )""".format(
-                                   index=index,
-                                   acft_make=event['acft_make'].strip().replace("'",""),
-                                   ev_month=event['ev_month'],
-                                   ev_year=event['ev_year'],
-                                   ev_type=event['ev_type'].strip().replace("'",""),
-                                   ev_id=event['ev_id'],
-                                   regis_no=event['regis_no'],
-                                   ntsb_no=event['ntsb_no_x'],
-                                   owner_acft=(event.get('owner_acft') or '').strip().replace("'",""),
-                                   ev_highest_injury=event['ev_highest_injury'],
-                                   ev_city=(event['ev_city'] or "").strip().replace("'",""),
-                                   commercial_space_flight=event['commercial_space_flight'],
-                                   afm_hrs=event['afm_hrs'],
-                                   afm_hrs_last_insp=event['afm_hrs_last_insp'],
-                                   date_last_insp=event['date_last_insp'],
-                               )
-            cur.execute(sql_statement)
+            cur.execute(sql_statement.decode("ascii","ignore"))
             conn.commit()
+        except Exception, e:
+            print("could not process %s %s" % (index, str(e)))
             index += 1
-        except UnicodeEncodeError, e:
-            print("failed to add row %s %s" % (index, str(e)) )
-            pass
+            continue
+            
+        
+        index += 1
+        if index % 5000 == 0: print("processed %s" % index)
+
+  
     
 
 if __name__ == "__main__":

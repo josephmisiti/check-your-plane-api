@@ -51,6 +51,8 @@ static CGFloat kLeftMargin = 15.0f;
     
     _descriptionView = [[UIWebView alloc] initWithFrame:self.view.frame];
 
+    NSLog(@"%@", self.accident);
+    
 }
 
 #pragma mark - Private
@@ -61,7 +63,6 @@ static CGFloat kLeftMargin = 15.0f;
     self.lastInspectionDate.text = self.accident.lastInspectedDate;
     self.numHoursLastInspection.text = self.accident.amountHrsSinceLastInspection;
     self.totalAmountOfHours.text = self.accident.amountOfHours;
-    
 }
 
 #pragma mark - Lazy Loading
@@ -165,8 +166,6 @@ static CGFloat kLeftMargin = 15.0f;
     [_descriptionView loadRequest:request];
     [self.webViewContainer.view addSubview:_descriptionView];
     [self.navigationController pushViewController:self.webViewContainer animated:YES];
-    
-    
 }
 
 @end

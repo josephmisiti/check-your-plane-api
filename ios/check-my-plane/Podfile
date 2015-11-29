@@ -10,6 +10,7 @@ pod 'AFNetworking', '~> 2.4'
 pod 'Mixpanel'
 pod 'YapDatabase'
 pod 'Mantle'
+pod 'Reachability'
 
 end
 
