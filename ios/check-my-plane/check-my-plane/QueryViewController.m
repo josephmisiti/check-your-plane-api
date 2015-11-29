@@ -39,6 +39,8 @@ static CGFloat kLeftMargin = 15.0f;
     _accidentViewController = [[AccidentViewController alloc] init];
     _accidentList = [[AccidentList alloc] init];
     self.accidentsArray = [[NSMutableArray alloc] init];
+    
+    self.title = @"Enter Tail Number";
 }
 
 -(void)viewWillAppear:(BOOL)animated {

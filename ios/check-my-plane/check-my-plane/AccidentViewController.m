@@ -53,8 +53,7 @@ static CGFloat kLeftMargin = 15.0f;
     
     _descriptionView = [[UIWebView alloc] initWithFrame:self.view.frame];
 
-    NSLog(@"%@", self.accident);
-    
+    self.title = self.accident.registrationNumber;
 }
 
 #pragma mark - Private

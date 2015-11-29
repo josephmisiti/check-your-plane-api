@@ -30,6 +30,8 @@
     self.clearsSelectionOnViewWillAppear = NO;
     self.tableView.separatorColor = [UIColor blackColor];
 
+    self.title = @"Accident List";
+    
 }
 
 - (void)didReceiveMemoryWarning {
