@@ -50,8 +50,6 @@ http://dev.checkmyplane.com/api/v1/accidents/N6312H
 
 [![](https://github.com/josephmisiti/check-your-plane-api/blob/master/images/screen2.png)]()
 
-[![](https://github.com/josephmisiti/check-your-plane-api/blob/master/images/screen3.png)]()
-
 
 #### Helping out?
 
