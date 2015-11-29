@@ -10,15 +10,18 @@
 #import "HTTPClient.h"
 #import "AccidentViewController.h"
 #import "Accident.h"
+#import "AccidentList.h"
 
 @implementation QueryViewController {
     HTTPClient *_httpClient;
     AccidentViewController* _accidentViewController;
+    AccidentList* _accidentList;
 }
 
 @synthesize inputLabel = _inputLabel;
 @synthesize inputField = _inputField;
 @synthesize submitButton = _submitButton;
+@synthesize accidentsArray = _accidentsArray;
 
 static CGFloat kLeftMargin = 15.0f;
 
@@ -34,6 +37,8 @@ static CGFloat kLeftMargin = 15.0f;
     
     _httpClient = [HTTPClient sharedClient];
     _accidentViewController = [[AccidentViewController alloc] init];
+    _accidentList = [[AccidentList alloc] init];
+    self.accidentsArray = [[NSMutableArray alloc] init];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -61,7 +66,7 @@ static CGFloat kLeftMargin = 15.0f;
         _inputField.layer.cornerRadius = 10; // this value vary as per your desire
         _inputField.clipsToBounds = YES;
         [_inputField setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:75.0]];
-        _inputField.text = @"N8373L";
+        _inputField.text = @"N757LV";
         UIColor *color = [UIColor blackColor];
         _inputField.attributedPlaceholder =
         [[NSAttributedString alloc] initWithString:@"Enter registration number (starts with N)"
@@ -100,14 +105,23 @@ static CGFloat kLeftMargin = 15.0f;
     [_httpClient searchRegistrationNumber:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *dictionary = (NSDictionary *)responseObject;
         Accident *accident;
+        [self.accidentsArray removeAllObjects];
         for (NSDictionary *accidentDictionary in [dictionary objectForKey:@"Objects"]) {
             NSError *error = nil;
             accident = [MTLJSONAdapter modelOfClass:Accident.class fromJSONDictionary:accidentDictionary error:&error];
+            [self.accidentsArray addObject:accident];
             NSLog(@"%@",accident);
         }
         
-        [_accidentViewController setAccident:accident];
-        [self.navigationController pushViewController:_accidentViewController animated:YES];
+        if([self.accidentsArray count] == 0){
+            NSLog(@" --- here -----");
+        } else if([self.accidentsArray count] == 1){
+            [_accidentViewController setAccident:accident];
+            [self.navigationController pushViewController:_accidentViewController animated:YES];
+        } else {
+            _accidentList.accidentsArray = self.accidentsArray;
+            [self.navigationController pushViewController:_accidentList animated:YES];
+        }
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 

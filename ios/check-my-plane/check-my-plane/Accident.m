@@ -20,6 +20,7 @@
         @"lastInspectedDate" : @"LastInspectedDate",
         @"amountHrsSinceLastInspection" : @"AmountHrsSinceLastInspection",
         @"amountOfHours" : @"AmountOfHours",
+        @"owner": @"Owner",
     };
 }
 

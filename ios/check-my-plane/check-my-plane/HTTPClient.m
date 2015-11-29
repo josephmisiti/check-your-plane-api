@@ -47,7 +47,6 @@
                          success:(MAPHTTPClientSuccess)success
                          failure:(MAPHTTPClientFailure)failure {
     
-    
     NSString* url = kQueryURL;
     if([params objectForKey:@"registration_number"]){
         url = [NSString stringWithFormat:kDetailsURL, [params objectForKey:@"registration_number"]];

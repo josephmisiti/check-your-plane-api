@@ -19,6 +19,7 @@
 @property (nonatomic, strong) UILabel* lastInspectionDate;
 @property (nonatomic, strong) UILabel* numHoursLastInspection;
 @property (nonatomic, strong) UILabel* totalAmountOfHours;
+@property (nonatomic, strong) UILabel* airplaneOwner;
 
 @property (nonatomic, strong) UIButton* descriptionButton;
 @property (nonatomic, strong) UIViewController* webViewContainer;

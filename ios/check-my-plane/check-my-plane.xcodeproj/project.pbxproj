@@ -21,6 +21,7 @@
 		6473BDA11C0A4E450089FCD3 /* Accident.m in Sources */ = {isa = PBXBuildFile; fileRef = 6473BDA01C0A4E450089FCD3 /* Accident.m */; };
 		6473BDA31C0A57EB0089FCD3 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6473BDA21C0A57EB0089FCD3 /* background.png */; };
 		6473BDA61C0A5A1E0089FCD3 /* AccidentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6473BDA51C0A5A1E0089FCD3 /* AccidentViewController.m */; };
+		6473BDAC1C0B9F880089FCD3 /* AccidentList.m in Sources */ = {isa = PBXBuildFile; fileRef = 6473BDAB1C0B9F880089FCD3 /* AccidentList.m */; };
 		D8C3A3D782D4294E5AA6E0D5 /* libPods-check-my-plane.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 551E19FA41C5C2184EBC0906 /* libPods-check-my-plane.a */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,8 @@
 		6473BDA21C0A57EB0089FCD3 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		6473BDA41C0A5A1E0089FCD3 /* AccidentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccidentViewController.h; sourceTree = "<group>"; };
 		6473BDA51C0A5A1E0089FCD3 /* AccidentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccidentViewController.m; sourceTree = "<group>"; };
+		6473BDAA1C0B9F880089FCD3 /* AccidentList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccidentList.h; sourceTree = "<group>"; };
+		6473BDAB1C0B9F880089FCD3 /* AccidentList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccidentList.m; sourceTree = "<group>"; };
 		BB04E86AB746F1A4F81CDD46 /* Pods-check-my-plane.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-check-my-plane.debug.xcconfig"; path = "Pods/Target Support Files/Pods-check-my-plane/Pods-check-my-plane.debug.xcconfig"; sourceTree = "<group>"; };
 		C4AE9DEBEE69B6A17EC638EE /* Pods-check-my-plane.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-check-my-plane.release.xcconfig"; path = "Pods/Target Support Files/Pods-check-my-plane/Pods-check-my-plane.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -210,6 +213,8 @@
 				6473BD981C0A1CA50089FCD3 /* QueryViewController.m */,
 				6473BDA41C0A5A1E0089FCD3 /* AccidentViewController.h */,
 				6473BDA51C0A5A1E0089FCD3 /* AccidentViewController.m */,
+				6473BDAA1C0B9F880089FCD3 /* AccidentList.h */,
+				6473BDAB1C0B9F880089FCD3 /* AccidentList.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -405,6 +410,7 @@
 				6473BD5F1C0A1AB80089FCD3 /* main.m in Sources */,
 				6473BDA61C0A5A1E0089FCD3 /* AccidentViewController.m in Sources */,
 				6473BD9C1C0A1D780089FCD3 /* Constants.m in Sources */,
+				6473BDAC1C0B9F880089FCD3 /* AccidentList.m in Sources */,
 				6473BDA11C0A4E450089FCD3 /* Accident.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

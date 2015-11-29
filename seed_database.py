@@ -80,7 +80,7 @@ def load():
                                commercial_space_flight=event['commercial_space_flight'],
                                afm_hrs=event['afm_hrs'],
                                afm_hrs_last_insp=event['afm_hrs_last_insp'],
-                               date_last_insp=event['commercial_space_flight'],
+                               date_last_insp=event['date_last_insp'],
                            )
     
         try:

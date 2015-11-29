@@ -12,8 +12,9 @@ import (
 )
 
 const (
-	ACCIDENTS_QUERY = "SELECT id,regis_no,ev_id,acft_make,afm_hrs,afm_hrs_last_insp,date_last_insp FROM events where regis_no ~* '%s' LIMIT 15"
-	EVENTS_QUERY    = "SELECT id,regis_no,ev_id,acft_make,afm_hrs,afm_hrs_last_insp,date_last_insp  FROM events LIMIT 15"
+	ACCIDENTS_QUERY = `SELECT id,regis_no,ev_id,acft_make,afm_hrs,afm_hrs_last_insp,date_last_insp,owner_acft FROM events WHERE regis_no ~* '%s'`
+	EVENTS_QUERY    = `SELECT id,regis_no,ev_id,acft_make,afm_hrs,afm_hrs_last_insp,date_last_insp,owner_acft 
+                       FROM events`
 	DESCRIPTION_URL = "http://www.ntsb.gov/_layouts/ntsb.aviation/brief.aspx?ev_id=%s"
 )
 
@@ -25,6 +26,7 @@ type Accident struct {
 	LastInspectedDate            string
 	AmountHrsSinceLastInspection string
 	AmountOfHours                string
+	Owner                        string
 }
 
 type Accidents []Accident
@@ -34,7 +36,7 @@ type AccidentResponse struct {
 	Objects Accidents
 }
 
-func (l *Accidents) addElement(registrationNumber string, eventId string, aircraftMake string, lastInspectedDate string, amountHrsSinceLastInspection string, amountOfHours string) {
+func (l *Accidents) addElement(registrationNumber string, eventId string, aircraftMake string, lastInspectedDate string, amountHrsSinceLastInspection string, amountOfHours string, owner string) {
 	e := &Accident{
 		RegistrationNumber:           registrationNumber,
 		EventId:                      eventId,
@@ -42,6 +44,7 @@ func (l *Accidents) addElement(registrationNumber string, eventId string, aircra
 		LastInspectedDate:            lastInspectedDate,
 		AmountHrsSinceLastInspection: amountHrsSinceLastInspection,
 		AmountOfHours:                amountOfHours,
+		Owner:                        owner,
 	}
 
 	e.getDescription()
@@ -72,6 +75,7 @@ func AccidentEventEndpoint(w http.ResponseWriter, r *http.Request) {
 		date_last_insp    string
 		afm_hrs_last_insp string
 		afm_hrs           string
+		owner_acft        string
 	)
 
 	rows, err := db.Query(QUERY)
@@ -82,11 +86,11 @@ func AccidentEventEndpoint(w http.ResponseWriter, r *http.Request) {
 
 	defer rows.Close()
 	for rows.Next() {
-		err := rows.Scan(&id, &regis_no, &ev_id, &acft_make, &afm_hrs, &afm_hrs_last_insp, &date_last_insp)
+		err := rows.Scan(&id, &regis_no, &ev_id, &acft_make, &afm_hrs, &afm_hrs_last_insp, &date_last_insp, &owner_acft)
 		if err != nil {
 			log.Fatal(err)
 		}
-		accidents.addElement(regis_no, ev_id, acft_make, date_last_insp, afm_hrs_last_insp, afm_hrs)
+		accidents.addElement(regis_no, ev_id, acft_make, date_last_insp, afm_hrs_last_insp, afm_hrs, owner_acft)
 	}
 
 	response := AccidentResponse{
@@ -121,6 +125,7 @@ func AccidentQueryEndPoint(w http.ResponseWriter, r *http.Request) {
 		date_last_insp    string
 		afm_hrs_last_insp string
 		afm_hrs           string
+		owner_acft        string
 	)
 
 	rows, err := db.Query(QUERY)
@@ -131,11 +136,11 @@ func AccidentQueryEndPoint(w http.ResponseWriter, r *http.Request) {
 
 	defer rows.Close()
 	for rows.Next() {
-		err := rows.Scan(&id, &regis_no, &ev_id, &acft_make, &afm_hrs, &afm_hrs_last_insp, &date_last_insp)
+		err := rows.Scan(&id, &regis_no, &ev_id, &acft_make, &afm_hrs, &afm_hrs_last_insp, &date_last_insp, &owner_acft)
 		if err != nil {
 			log.Fatal(err)
 		}
-		accidents.addElement(regis_no, ev_id, acft_make, date_last_insp, afm_hrs_last_insp, afm_hrs)
+		accidents.addElement(regis_no, ev_id, acft_make, date_last_insp, afm_hrs_last_insp, afm_hrs, owner_acft)
 	}
 
 	response := AccidentResponse{

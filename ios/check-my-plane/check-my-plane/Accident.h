@@ -17,5 +17,6 @@
 @property (nonatomic, copy, readonly) NSString *lastInspectedDate;
 @property (nonatomic, copy, readonly) NSString *amountHrsSinceLastInspection;
 @property (nonatomic, copy, readonly) NSString *amountOfHours;
+@property (nonatomic, copy, readonly) NSString *owner;
 
 @end
