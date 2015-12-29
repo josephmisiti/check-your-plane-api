@@ -11,14 +11,13 @@
 // Global Strings
 extern NSString *const kQueryURL;
 extern NSString *const kDetailsURL;
+extern NSString *const kFont;
+
 
 // Global Colors
 extern NSUInteger const kColorGrey;
 extern NSUInteger const kColorPink;
 
 // UITableViewController
-
-
-
 extern NSString *const NetworkAvailableNotification;
 extern NSString *const NetworkUnavailableNotification;

@@ -10,6 +10,7 @@
 
 NSString *const kQueryURL = @"http://dev.checkmyplane.com/api/v1/accidents";
 NSString *const kDetailsURL = @"http://dev.checkmyplane.com/api/v1/accidents/%@";
+NSString *const kFont = @"HelveticaNeue-Bold";
 
 CGFloat const kCellHeight = 100.0f;
 

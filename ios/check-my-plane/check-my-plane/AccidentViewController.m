@@ -81,7 +81,7 @@ static CGFloat kLeftMargin = 15.0f;
         _airplaneMake.backgroundColor = [UIColor whiteColor];
         _airplaneMake.layer.cornerRadius = 10; // this value vary as per your desire
         _airplaneMake.clipsToBounds = YES;
-        _airplaneMake.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:20.0f];
+        _airplaneMake.font = [UIFont fontWithName:kFont size:20.0f];
 
     }
     return _airplaneMake;
@@ -95,7 +95,7 @@ static CGFloat kLeftMargin = 15.0f;
         _registrationNumber.backgroundColor = [UIColor whiteColor];
         _registrationNumber.layer.cornerRadius = 10; // this value vary as per your desire
         _registrationNumber.clipsToBounds = YES;
-        _registrationNumber.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:20.0f];
+        _registrationNumber.font = [UIFont fontWithName:kFont size:20.0f];
 
         
     }
@@ -110,7 +110,7 @@ static CGFloat kLeftMargin = 15.0f;
         _lastInspectionDate.backgroundColor = [UIColor whiteColor];
         _lastInspectionDate.layer.cornerRadius = 10; // this value vary as per your desire
         _lastInspectionDate.clipsToBounds = YES;
-        _lastInspectionDate.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:20.0f];
+        _lastInspectionDate.font = [UIFont fontWithName:kFont size:20.0f];
 
         
     }
@@ -125,7 +125,7 @@ static CGFloat kLeftMargin = 15.0f;
         _numHoursLastInspection.backgroundColor = [UIColor whiteColor];
         _numHoursLastInspection.layer.cornerRadius = 10; // this value vary as per your desire
         _numHoursLastInspection.clipsToBounds = YES;
-        _numHoursLastInspection.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:20.0f];
+        _numHoursLastInspection.font = [UIFont fontWithName:kFont size:20.0f];
 
         
     }
@@ -140,7 +140,7 @@ static CGFloat kLeftMargin = 15.0f;
         _totalAmountOfHours.backgroundColor = [UIColor whiteColor];
         _totalAmountOfHours.layer.cornerRadius = 10; // this value vary as per your desire
         _totalAmountOfHours.clipsToBounds = YES;
-        _totalAmountOfHours.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:20.0f];
+        _totalAmountOfHours.font = [UIFont fontWithName:kFont size:20.0f];
         
     }
     return _totalAmountOfHours;
@@ -154,7 +154,7 @@ static CGFloat kLeftMargin = 15.0f;
         _airplaneOwner.backgroundColor = [UIColor whiteColor];
         _airplaneOwner.layer.cornerRadius = 10; // this value vary as per your desire
         _airplaneOwner.clipsToBounds = YES;
-        _airplaneOwner.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:20.0f];
+        _airplaneOwner.font = [UIFont fontWithName:kFont size:20.0f];
         
     }
     return _airplaneOwner;
@@ -170,7 +170,7 @@ static CGFloat kLeftMargin = 15.0f;
         _descriptionButton.layer.cornerRadius = 10; // this value vary as per your desire
         _descriptionButton.clipsToBounds = YES;
         [_descriptionButton setTitle:@"More Information" forState:UIControlStateNormal];
-        _descriptionButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:25.0f];
+        _descriptionButton.titleLabel.font = [UIFont fontWithName:kFont size:25.0f];
         [_descriptionButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_descriptionButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
         [_descriptionButton addTarget:self action:@selector(onClickReadDescription:)

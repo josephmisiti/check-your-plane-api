@@ -67,14 +67,14 @@ static CGFloat kLeftMargin = 15.0f;
         _inputField.backgroundColor = [UIColor whiteColor];
         _inputField.layer.cornerRadius = 10; // this value vary as per your desire
         _inputField.clipsToBounds = YES;
-        [_inputField setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:75.0]];
+        [_inputField setFont:[UIFont fontWithName:kFont size:75.0]];
         _inputField.text = @"N757LV";
         UIColor *color = [UIColor blackColor];
         _inputField.attributedPlaceholder =
         [[NSAttributedString alloc] initWithString:@"Enter registration number (starts with N)"
         attributes:@{
                      NSForegroundColorAttributeName: color,
-                     NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Bold" size:15.0]
+                     NSFontAttributeName : [UIFont fontWithName:kFont size:15.0]
         }];
     }
     return _inputField;
@@ -90,7 +90,7 @@ static CGFloat kLeftMargin = 15.0f;
         _submitButton.layer.cornerRadius = 10; // this value vary as per your desire
         _submitButton.clipsToBounds = YES;
         [_submitButton setTitle:@"Check My Plane" forState:UIControlStateNormal];
-        _submitButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:25.0f];
+        _submitButton.titleLabel.font = [UIFont fontWithName:kFont size:25.0f];
         [_submitButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_submitButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
         [_submitButton addTarget:self action:@selector(onSubmitQuery:)
