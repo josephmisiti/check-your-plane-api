@@ -155,7 +155,7 @@ func main() {
 	router := mux.NewRouter().StrictSlash(true)
 	router.HandleFunc("/api/v1/accidents", AccidentQueryEndPoint).Methods("GET")
 	router.HandleFunc("/api/v1/accidents/{accident_id}", AccidentEventEndpoint).Methods("GET")
-
 	fmt.Println("Your webserver is running on port 8000")
+	fmt.Println("(name sure nginx is running!!!)")
 	log.Fatal(http.ListenAndServe(":8000", router))
 }

@@ -112,11 +112,9 @@ static CGFloat kLeftMargin = 15.0f;
             NSError *error = nil;
             accident = [MTLJSONAdapter modelOfClass:Accident.class fromJSONDictionary:accidentDictionary error:&error];
             [self.accidentsArray addObject:accident];
-            NSLog(@"%@",accident);
         }
         
         if([self.accidentsArray count] == 0){
-            NSLog(@" --- here -----");
         } else if([self.accidentsArray count] == 1){
             [_accidentViewController setAccident:accident];
             [self.navigationController pushViewController:_accidentViewController animated:YES];
@@ -128,10 +126,6 @@ static CGFloat kLeftMargin = 15.0f;
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 
     }];
-    
-    
-    
-    
 }
 
 @end
